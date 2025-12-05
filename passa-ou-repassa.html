@@ -940,7 +940,7 @@
                 ✋ Validar Resposta
             </button>
             <button class="btn btn-secondary" id="btnPass" onclick="passToOtherTeam()" disabled>
-                ➡️ Passar
+                ➡️ <span id="btnPassText"></span>Passar</span>
             </button>
             <button class="btn btn-danger" id="btnReset" onclick="resetGame()">
                 🔄 Reiniciar
@@ -991,11 +991,13 @@
             round: 1,
             scores: { red: 0, blue: 0 },
             currentTeam: null,
+            originalTeam: null, // Equipe que apertou primeiro
             phase: 'idle', // idle, reading, waiting_team, answering, validating
             timer: null,
             timeLeft: CONFIG.timerDuration,
             audioEnabled: false,
             selectedOption: null,
+            passCount: 0, // 0 = ninguém passou, 1 = passou, 2 = repassou (máximo)
             canPass: true
         };
 
@@ -1016,6 +1018,7 @@
             resultOverlay: document.getElementById('resultOverlay'),
             btnNewQuestion: document.getElementById('btnNewQuestion'),
             btnPass: document.getElementById('btnPass'),
+            btnPassText: document.getElementById('btnPassText'),
             btnValidateOpen: document.getElementById('btnValidateOpen'),
             statRemaining: document.getElementById('statRemaining'),
             statAnswered: document.getElementById('statAnswered'),
@@ -1147,9 +1150,14 @@
 
             // Reset estado
             gameState.currentTeam = null;
+            gameState.originalTeam = null;
             gameState.selectedOption = null;
+            gameState.passCount = 0;
             gameState.canPass = true;
             gameState.phase = 'reading';
+            
+            // Reset texto do botão passar
+            elements.btnPassText.textContent = 'Passar';
             
             // Esconde seções
             elements.teamSelection.classList.remove('active');
@@ -1228,6 +1236,7 @@
         // 4. Seleciona time que apertou
         function selectTeam(team) {
             gameState.currentTeam = team;
+            gameState.originalTeam = team; // Guarda quem apertou primeiro
             gameState.phase = 'answering';
             
             // Esconde seleção de time
@@ -1325,12 +1334,14 @@
             finishQuestion();
         }
 
-        // 8. Passar para outro time
+        // 8. Passar para outro time (PASSA ou REPASSA)
         function passToOtherTeam() {
             if (!gameState.canPass || gameState.phase !== 'answering') return;
             
-            gameState.canPass = false;
             stopTimer();
+            
+            // Incrementa contador de passes
+            gameState.passCount++;
             
             // Troca de time
             const otherTeam = gameState.currentTeam === 'red' ? 'blue' : 'red';
@@ -1340,18 +1351,26 @@
             if (otherTeam === 'red') {
                 elements.teamRed.classList.add('active');
                 elements.teamBlue.classList.remove('active');
-                updatePhase('🔴 PASSOU - VERMELHO');
             } else {
                 elements.teamBlue.classList.add('active');
                 elements.teamRed.classList.remove('active');
-                updatePhase('🔵 PASSOU - AZUL');
             }
             
-            elements.questionStatus.textContent = otherTeam === 'red' ? 'VEZ DO VERMELHO' : 'VEZ DO AZUL';
-            elements.btnPass.disabled = true;
-            
-            // Mantém botão de validar visível se for pergunta aberta
-            // (já está visível se necessário)
+            // Verifica se ainda pode passar/repassar
+            if (gameState.passCount === 1) {
+                // Primeiro passe - outro time pode REPASSAR
+                updatePhase(otherTeam === 'red' ? '🔴 PASSOU - VERMELHO' : '🔵 PASSOU - AZUL');
+                elements.questionStatus.textContent = otherTeam === 'red' ? 'VEZ DO VERMELHO' : 'VEZ DO AZUL';
+                elements.btnPassText.textContent = 'Repassar';
+                elements.btnPass.disabled = false;
+                gameState.canPass = true;
+            } else if (gameState.passCount === 2) {
+                // Segundo passe (REPASSE) - não pode mais passar
+                updatePhase(otherTeam === 'red' ? '🔴 REPASSOU - VERMELHO' : '🔵 REPASSOU - AZUL');
+                elements.questionStatus.textContent = otherTeam === 'red' ? 'VERMELHO DEVE RESPONDER!' : 'AZUL DEVE RESPONDER!';
+                elements.btnPass.disabled = true;
+                gameState.canPass = false;
+            }
             
             playSound('buzzer');
             
@@ -1522,11 +1541,13 @@
                 round: 1,
                 scores: { red: 0, blue: 0 },
                 currentTeam: null,
+                originalTeam: null,
                 phase: 'idle',
                 timer: null,
                 timeLeft: CONFIG.timerDuration,
                 audioEnabled: gameState.audioEnabled,
                 selectedOption: null,
+                passCount: 0,
                 canPass: true
             };
             
@@ -1538,6 +1559,7 @@
             elements.btnNewQuestion.disabled = false;
             elements.btnPass.disabled = true;
             elements.btnValidateOpen.style.display = 'none';
+            elements.btnPassText.textContent = 'Passar';
             
             hideAllOptions();
             resetOptionsStyle();

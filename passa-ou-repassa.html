@@ -917,16 +917,16 @@
 
         <!-- Valores -->
         <div class="values-panel">
-            <div class="value-box">
-                <span class="value-amount">-50</span>
+            <div class="value-box" id="valueBoxWrong">
+                <span class="value-amount" id="valueWrong">-50</span>
                 <span class="value-label">Errar</span>
             </div>
             <div class="value-box">
                 <span class="value-amount">0</span>
                 <span class="value-label">Passar</span>
             </div>
-            <div class="value-box">
-                <span class="value-amount">+100</span>
+            <div class="value-box" id="valueBoxCorrect">
+                <span class="value-amount" id="valueCorrect">+100</span>
                 <span class="value-label">Acertar</span>
             </div>
         </div>
@@ -940,7 +940,7 @@
                 ✋ Validar Resposta
             </button>
             <button class="btn btn-secondary" id="btnPass" onclick="passToOtherTeam()" disabled>
-                ➡️ <span id="btnPassText"></span>Passar</span>
+                ➡️ <span id="btnPassText">Passar</span>
             </button>
             <button class="btn btn-danger" id="btnReset" onclick="resetGame()">
                 🔄 Reiniciar
@@ -998,7 +998,9 @@
             audioEnabled: false,
             selectedOption: null,
             passCount: 0, // 0 = ninguém passou, 1 = passou, 2 = repassou (máximo)
-            canPass: true
+            canPass: true,
+            currentPointsCorrect: 100, // Pontos atuais por acerto (diminui ao passar)
+            currentPointsWrong: -50    // Pontos atuais por erro (aumenta penalidade ao passar)
         };
 
         // ==================== ELEMENTOS DOM ====================
@@ -1025,7 +1027,11 @@
             statRound: document.getElementById('statRound'),
             audioBtn: document.getElementById('audioBtn'),
             gamePhase: document.getElementById('gamePhase'),
-            gameContainer: document.getElementById('gameContainer')
+            gameContainer: document.getElementById('gameContainer'),
+            valueCorrect: document.getElementById('valueCorrect'),
+            valueWrong: document.getElementById('valueWrong'),
+            valueBoxCorrect: document.getElementById('valueBoxCorrect'),
+            valueBoxWrong: document.getElementById('valueBoxWrong')
         };
 
         const audios = {
@@ -1155,9 +1161,12 @@
             gameState.passCount = 0;
             gameState.canPass = true;
             gameState.phase = 'reading';
+            gameState.currentPointsCorrect = CONFIG.pointsCorrect;
+            gameState.currentPointsWrong = CONFIG.pointsWrong;
             
-            // Reset texto do botão passar
+            // Reset texto do botão passar e valores
             elements.btnPassText.textContent = 'Passar';
+            updateValuesPanel();
             
             // Esconde seções
             elements.teamSelection.classList.remove('active');
@@ -1317,15 +1326,16 @@
                 }
             }
             
+            // Usa pontos dinâmicos (ajustados pelos passes)
             if (isCorrect) {
-                gameState.scores[gameState.currentTeam] += CONFIG.pointsCorrect;
+                gameState.scores[gameState.currentTeam] += gameState.currentPointsCorrect;
                 playSound('acerto');
                 createConfetti();
-                showResultMessage(gameState.currentTeam, `ACERTOU! +${CONFIG.pointsCorrect} pontos`, true);
+                showResultMessage(gameState.currentTeam, `ACERTOU! +${gameState.currentPointsCorrect} pontos`, true);
             } else {
-                gameState.scores[gameState.currentTeam] += CONFIG.pointsWrong;
+                gameState.scores[gameState.currentTeam] += gameState.currentPointsWrong;
                 playSound('erro');
-                showResultMessage(gameState.currentTeam, `ERROU! ${CONFIG.pointsWrong} pontos`, false);
+                showResultMessage(gameState.currentTeam, `ERROU! ${gameState.currentPointsWrong} pontos`, false);
             }
             
             gameState.answeredQuestions++;
@@ -1342,6 +1352,11 @@
             
             // Incrementa contador de passes
             gameState.passCount++;
+            
+            // Ajusta pontuação: -25% acerto, +25% penalidade a cada passe
+            gameState.currentPointsCorrect = Math.round(gameState.currentPointsCorrect * 0.75);
+            gameState.currentPointsWrong = Math.round(gameState.currentPointsWrong * 1.25);
+            updateValuesPanel();
             
             // Troca de time
             const otherTeam = gameState.currentTeam === 'red' ? 'blue' : 'red';
@@ -1440,9 +1455,9 @@
 
         function timeUp() {
             playSound('erro');
-            gameState.scores[gameState.currentTeam] += CONFIG.pointsWrong;
+            gameState.scores[gameState.currentTeam] += gameState.currentPointsWrong;
             updateScores();
-            showResultMessage(gameState.currentTeam, 'TEMPO ESGOTADO! -50 pontos', false);
+            showResultMessage(gameState.currentTeam, `TEMPO ESGOTADO! ${gameState.currentPointsWrong} pontos`, false);
             gameState.answeredQuestions++;
             updateStats();
             finishQuestion();
@@ -1479,9 +1494,28 @@
             elements.statRound.textContent = gameState.round;
         }
 
+        function updateValuesPanel() {
+            // Atualiza valores exibidos
+            const correctText = gameState.currentPointsCorrect > 0 ? `+${gameState.currentPointsCorrect}` : gameState.currentPointsCorrect;
+            const wrongText = gameState.currentPointsWrong;
+            
+            elements.valueCorrect.textContent = correctText;
+            elements.valueWrong.textContent = wrongText;
+            
+            // Destaque visual se valores mudaram
+            if (gameState.passCount > 0) {
+                elements.valueBoxCorrect.style.background = 'linear-gradient(180deg, #ff9800 0%, #e65100 100%)';
+                elements.valueBoxWrong.style.background = 'linear-gradient(180deg, #f44336 0%, #b71c1c 100%)';
+            } else {
+                elements.valueBoxCorrect.style.background = '';
+                elements.valueBoxWrong.style.background = '';
+            }
+        }
+
         function updateUI() {
             updateScores();
             updateStats();
+            updateValuesPanel();
             elements.timerDisplay.textContent = CONFIG.timerDuration;
         }
 
@@ -1548,7 +1582,9 @@
                 audioEnabled: gameState.audioEnabled,
                 selectedOption: null,
                 passCount: 0,
-                canPass: true
+                canPass: true,
+                currentPointsCorrect: CONFIG.pointsCorrect,
+                currentPointsWrong: CONFIG.pointsWrong
             };
             
             elements.teamSelection.classList.remove('active');

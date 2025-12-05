@@ -1202,6 +1202,9 @@
             
             elements.questionText.classList.remove('typing');
             
+            // Inicia o timer assim que o enunciado aparece
+            startTimer();
+            
             // Mostra alternativas uma por uma (se tiver)
             if (gameState.currentQuestion.hasOptions && gameState.currentQuestion.options.length > 0) {
                 await showOptionsSequentially();
@@ -1274,8 +1277,7 @@
                 elements.btnValidateOpen.style.display = 'inline-block';
             }
             
-            // Inicia timer
-            startTimer();
+            // Timer já está rodando (iniciado quando a pergunta apareceu)
         }
 
         // 5. Seleciona opção (clicando na alternativa)

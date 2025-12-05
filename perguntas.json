@@ -1,6 +1,6 @@
 [
   {
-    "texto": "3. Um algoritmo deve apresentar finitude, clareza e ordem ilógica. Verdadeiro ou Falso?"
+    "texto": "3. Um algoritmo deve apresentar finitude, clareza e ordem sem lógica. Verdadeiro ou Falso?"
   },
   {
     "texto": "4. O Git é classificado como:\nA) VCS distribuído\nB) VCS centralizado\nC) Editor de código\nD) Protocolo de rede"
@@ -30,7 +30,7 @@
     "texto": "24. git push envia commits para:\nA) Repositório remoto\nB) Armazenamento do computador\nC) Repositório local\nD) BIOS do Computador"
   },
   {
-    "texto": "28. Variável :\nA) Armazena valores mutáveis\nB) Função\nC) Estrutura fixa\nD) Tipo de laço"
+    "texto": "28. Variável :\nA) Armazena valores mutáveis\nB) É uma Função\nC) É uma Estrutura fixa\nD) É um Tipo de laço"
   },
   {
     "texto": "29. Merge é usado para:\nA) Unir branches\nB) Alternar entre branches\nC) Revisar código\nD) Deletar branches"
@@ -39,7 +39,7 @@
     "texto": "33. Um else pode existir sem precisar de um if. Verdadeiro ou Falso?"
   },
   {
-    "texto": "34. git pull:\nA) Baixa e mescla alterações\nB) Remove histórico\nC) Exclui branches\nD) Limpa o repositório"
+    "texto": "34. Para mandar o repositório local para o remoto, utilizamos git pull. Verdadeiro ou Falso?"
   },
   {
     "texto": "38. Operador OU no C# é:\nA) &&\nB) ||\nC) !\nD) !="
@@ -57,43 +57,43 @@
     "texto": "48. Funções servem para:\nA) Reutilizar código\nB) Organizar hardware\nC) Criar loops\nD) Clicar"
   },
   {
-    "texto": "49. git log exibe:\nA) Histórico de commits\nB) Bugs\nC) Arquitetura\nD) RAM"
+    "texto": "49. git log exibe:\nA) Histórico\nB) Bugs\nC) Arquitetura\nD) RAM"
   },
   {
-    "texto": "51. Considere o código:\n\ninteiro x = 3\ninteiro y = 5\n\nse (x * 2 > y) entao\n\t escreva(\"A\")\n senao\n\t escreva(\"B\")\n fimse\n\nO que será impresso?"
+    "texto": "y51. Considere o código:\n\ninteiro x = 3\ninteiro y = 5\n\nse (x * 2 > y) entao\n\t escreva(\"A\")\n senao\n\t escreva(\"B\")\n fimse\n\nO que será impresso?"
   },
   {
     "texto": "53. Qual janela no Unity mostra as características (como posição, rotação e escala) de um objeto selecionado? \nA) Scene \nB) Hierarchy \nC) Project \nD) Inspector"
   },
   {
-    "texto": "56. Qual é a saída?\n\ninteiro n = 10\n enquanto (n > 6) faca\n\t n = n - 2\n fimenquanto\n escreva(n)"
+    "texto": "y56. Qual é a saída?\n\ninteiro n = 10\n enquanto (n > 6) faca\n\t n = n - 2\n fimenquanto\n escreva(n)"
   },
   {
-    "texto": "57. O que é um merge conflict?"
+    "texto": "y57. O que é um merge conflict?"
   },
   {
-    "texto": "61. Qual é a saída?\n\ninteiro a = 2\ninteiro b = 4\ninteiro c = a + b * 3\nescreva(c)"
+    "texto": "y61. Qual é a saída?\n\ninteiro a = 2\ninteiro b = 4\ninteiro c = a + b * 3\nescreva(c)"
   },
   {
-    "texto": "62. Qual comando exibe histórico de commits?"
+    "texto": "62. Qual o nome do arquivo que funciona como uma 'lista negra' do git?"
   },
   {
-    "texto": "66. Qual é a saída?\n\ninteiro x = 0\npara i de 1 ate 4 faca\n\t x = x + i\nfimpara\nescreva(x)"
+    "texto": "y66. Qual é a saída?\n\ninteiro x = 0\npara i de 1 ate 4 faca\n\t x = x + i\nfimpara\nescreva(x)"
   },
   {
     "texto": "67. O que git clone faz?"
   },
   {
-    "texto": "71. Qual é a saída?\n\ninteiro s = 1\npara i de 1 ate 3 faca\n\t s = s * i\nfimpara\nescreva(s)"
+    "texto": "71. Qual é a saída?\n\ninteiro s = 10\npara (inteiro c = 1; c > s; c++){\n\t escreva(c)\n}\n"
   },
   {
-    "texto": "72. Branches são usados para:"
+    "texto": "72. 'git branch nome_branch' faz o quê?"
   },
   {
-    "texto": "76. Qual é a saída?\n\ninteiro n = 5\nse (n % 2 == 0) entao\n\t escreva(\"Par\")\nsenao\n\t escreva(\"Ímpar\")\nfimse"
+    "texto": "76. Qual é a saída?\n\ninteiro n = 23\nse (n % 3 == 0) {\n\t escreva(\"Goku\")\n}\nsenao{\n\t escreva(\"Vegeta\")\n}"
   },
   {
-    "texto": "77. Comando Git para colocar arquivo no stage?"
+    "texto": "77. Qual o comando git para colocar arquivo no stage?"
   },
   {
     "texto": "83. Qual componente é essencial para adicionar física a um objeto no Unity? \nA) Transform \nB) Mesh Renderer \nC) Collider \nD) Rigidbody"
@@ -102,27 +102,24 @@
     "texto": "84. Quais são os dois tipos de repositórios Git?"
   },
   {
-    "texto": "88. O que o código abaixo imprime se o usuário digitar 0?\n\ninteiro entrada\nleia(entrada)\nse (entrada > 0) entao\n\t escreva(\"positivo\")\nsenao\n\t escreva(\"nao positivo\")\nfimse"
+    "texto": "y88. O que o código abaixo imprime se o usuário digitar 0?\n\ninteiro entrada\nleia(entrada)\nse (entrada > 0) entao\n\t escreva(\"positivo\")\nsenao\n\t escreva(\"nao positivo\")\nfimse"
   },
   {
     "texto": "89. Em um script C# no Unity, a função que é chamada automaticamente a cada novo quadro (frame) do jogo é:\nA) Start()\nB) Awake()\nC) Update()\nD) OnEnable()"
   },
   {
-    "texto": "92. Qual é a saída?\n\ninteiro i = 1\ninteiro cont = 0\nenquanto (i <= 8) faca\n\t se (i % 3 == 0) {\n\t \t cont = cont + 1\n\t }\n\t i = i + 1\nescreva(cont)"
+    "texto": "y92. Qual é a saída?\n\ninteiro i = 1\ninteiro cont = 0\nenquanto (i <= 8) faca\n\t se (i % 3 == 0) {\n\t \t cont = cont + 1\n\t }\n\t i = i + 1\nescreva(cont)"
   },
   {
-    "texto": "94. Qual é a saída?\n\ninteiro x = 5\npara i de 1 ate 3 faca\n\t x = x + i\n\t se (x > 8) entao\n\t \t escreva(x)\n\t fimse\nfimpara"
+    "texto": "y94. Qual é a saída?\n\ninteiro x = 5\npara i de 1 ate 3 faca\n\t x = x + i\n\t se (x > 8) entao\n\t \t escreva(x)\n\t fimse\nfimpara"
   },
   {
-    "texto": "95. git reset --hard HEAD~1 faz:"
+    "texto": "95. Qual é o tipo dessa função?\n\nfuncao _______ multiplos (inteiro a, inteiro b) { \n\t retorne (a % b == 0) \n}"
   },
   {
-    "texto": "97. Qual é a saída?\n\ninteiro soma = 0\npara i de 1 ate 5 faca\n\t se (i % 2 == 0) entao\n\t \t soma = soma + i\n\t fimse\nfimpara\nescreva(soma)"
+    "texto": "97. Qual é a saída?\n\ninteiro soma = 0\n(inteiro c = 1; c <= 5; c++) {\n\t se (i % 2 == 0) {\n\t \t soma = soma + i\n\t }\n}\nescreva(soma)"
   },
   {
-    "texto": "100. Qual é a saída?\n\ninteiro a = 2\ninteiro b = 3\ninteiro c = 0\nse (a > b) entao\n\t c = a + b\nsenao\n\t c = b - a\nfimse\nescreva(c)"
-  },
-  {
-    "texto": "O comando git stash é usado para: \nA) Enviar commits para o repositório remoto \nB) Criar uma cópia isolada do projeto \nC) Esconder temporariamente as alterações locais não comitadas \nD) Apagar todo o histórico de um arquivo"
+    "texto": "y100. Qual é a saída?\n\ninteiro a = 2\ninteiro b = 3\ninteiro c = 0\nse (a > b) entao\n\t c = a + b\nsenao\n\t c = b - a\nfimse\nescreva(c)"
   }
 ]

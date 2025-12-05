@@ -8,7 +8,8 @@
     "resposta": 1
   },
   {
-    "texto": "3. Um algoritmo deve apresentar finitude, clareza e ordem sem lógica. Verdadeiro ou Falso?"
+    "texto": "3. Um algoritmo deve apresentar finitude, clareza e ordem sem lógica. Verdadeiro ou Falso?",
+    "resposta": 1
   },
   {
     "texto": "4. O Git é classificado como:\nA) VCS distribuído\nB) VCS centralizado\nC) Editor de código\nD) Protocolo de rede",
@@ -19,7 +20,8 @@
     "resposta": 0
   },
   {
-    "texto": "6. Personas ajudam a prever necessidades reais de usuários. Verdadeiro ou Falso?"
+    "texto": "6. Personas ajudam a prever necessidades reais de usuários. Verdadeiro ou Falso?",
+    "resposta": 0
   },
   {
     "texto": "7. A RAM é classificada como:\nA) Memória volátil\nB) Memória persistente\nC) Memória gráfica\nD) Armazenamento externo",
@@ -34,7 +36,8 @@
     "resposta": 1
   },
   {
-    "texto": "10. Limitar WIP reduz sobrecarga e multitarefa improdutiva. Verdadeiro ou Falso?"
+    "texto": "10. Limitar WIP reduz sobrecarga e multitarefa improdutiva. Verdadeiro ou Falso?",
+    "resposta": 0
   },
   {
     "texto": "11. Wireframe é:\nA) Estrutura inicial da interface\nB) Layout final\nC) Documento de requisitos\nD) Protótipo navegável",
@@ -45,7 +48,8 @@
     "resposta": 1
   },
   {
-    "texto": "13. Condicionais permitem alterar o fluxo do código. Verdadeiro ou Falso?"
+    "texto": "13. Condicionais permitem alterar o fluxo do código. Verdadeiro ou Falso?",
+    "resposta": 0
   },
   {
     "texto": "14. Branch serve para:\nA) Esconder código\nB) Desenvolver fluxos paralelos\nC) Comprimir arquivos\nD) Criar versões finais",
@@ -60,7 +64,8 @@
     "resposta": 0
   },
   {
-    "texto": "17. Contraste é essencial para legibilidade. Verdadeiro ou Falso?"
+    "texto": "17. Contraste é essencial para legibilidade. Verdadeiro ou Falso?",
+    "resposta": 0
   },
   {
     "texto": "18. O operador != significa:\nA) Igual\nB) Diferente\nC) Maior que\nD) Menor que",
@@ -71,14 +76,16 @@
     "resposta": 0
   },
   {
-    "texto": "20. git commit registra mudanças. Verdadeiro ou Falso?"
+    "texto": "20. git commit registra mudanças. Verdadeiro ou Falso?",
+    "resposta": 0
   },
   {
     "texto": "21. Prototipação de alta fidelidade simula:\nA) Aparência e interação reais\nB) Código final\nC) Banco de dados\nD) Build jogável",
     "resposta": 0
   },
   {
-    "texto": "22. GPUs realizam processamento paralelo. Verdadeiro ou Falso?"
+    "texto": "22. GPUs realizam processamento paralelo. Verdadeiro ou Falso?",
+    "resposta": 0
   },
   {
     "texto": "23. Loop que repete enquanto condição for verdadeira:\nA) for\nB) while\nC) switch\nD) return",
@@ -93,7 +100,8 @@
     "resposta": 0
   },
   {
-    "texto": "26. Acessibilidade melhora experiência para todos. Verdadeiro ou Falso?"
+    "texto": "26. Acessibilidade melhora experiência para todos. Verdadeiro ou Falso?",
+    "resposta": 0
   },
   {
     "texto": "27. Barramento principal entre CPU e memória:\nA) BUS\nB) PCIe\nC) SATA\nD) HDMI",
@@ -108,7 +116,8 @@
     "resposta": 0
   },
   {
-    "texto": "30. No Kanban, o fluxo é visual. Verdadeiro ou Falso?"
+    "texto": "30. No Kanban, o fluxo é visual. Verdadeiro ou Falso?",
+    "resposta": 0
   },
   {
     "texto": "31. Flowchart representa:\nA) Navegação ou fluxo lógico\nB) Layout final\nC) Arquitetura de arquivos\nD) Prototipagem gráfica",
@@ -119,17 +128,20 @@
     "resposta": 0
   },
   {
-    "texto": "33. Um else pode existir sem precisar de um if. Verdadeiro ou Falso?"
+    "texto": "33. Um else pode existir sem precisar de um if. Verdadeiro ou Falso?",
+    "resposta": 1
   },
   {
-    "texto": "34. Para mandar o repositório local para o remoto, utilizamos git pull. Verdadeiro ou Falso?"
+    "texto": "34. Para mandar o repositório local para o remoto, utilizamos git pull. Verdadeiro ou Falso?",
+    "resposta": 1
   },
   {
     "texto": "35. O Product Owner deve:\nA) Priorizar backlog\nB) Codificar\nC) Criar testes\nD) Definir arquitetura",
     "resposta": 0
   },
   {
-    "texto": "36. Feedback visual reforça ações. Verdadeiro ou Falso?"
+    "texto": "36. Feedback visual reforça ações. Verdadeiro ou Falso?",
+    "resposta": 0
   },
   {
     "texto": "37. Dissipadores servem para:\nA) Resfriamento\nB) Execução lógica\nC) Armazenamento\nD) Renderização",
@@ -152,7 +164,8 @@
     "resposta": 0
   },
   {
-    "texto": "42. A placa-mãe integra comunicação. Verdadeiro ou Falso?"
+    "texto": "42. A placa-mãe integra comunicação. Verdadeiro ou Falso?",
+    "resposta": 0
   },
   {
     "texto": "43. O laço de repetição FOR é dividido em quantas partes?\nA) 1 \nB) 2\nC) 3\nD) 4",
@@ -167,7 +180,8 @@
     "resposta": 0
   },
   {
-    "texto": "46. Pain points são dificuldades. Verdadeiro ou Falso?"
+    "texto": "46. Pain points são dificuldades. Verdadeiro ou Falso?",
+    "resposta": 0
   },
   {
     "texto": "47. Memória volátil:\nA) RAM\nB) SSD\nC) HDD\nD) ROM",
@@ -182,7 +196,8 @@
     "resposta": 0
   },
   {
-    "texto": "50. O Scrum Master remove impedimentos. Verdadeiro ou Falso?"
+    "texto": "50. O Scrum Master remove impedimentos. Verdadeiro ou Falso?",
+    "resposta": 0
   },
   {
     "texto": "51. Ao configurar elementos de Interface de Usuário (UI) no Unity, todos os elementos visuais (como botões, textos e imagens) devem ser filhos de qual componente obrigatório? A) Canvas B) UI Renderer C) ScreenSpace D) Scene Manager",
@@ -218,7 +233,8 @@
     "texto": "60. O que é refinamento?"
   },
   {
-    "texto": "61. Se um script tem uma única classe, então o script e a classe obrigatoriamente devem ter o mesmo nome.\nVerdadeiro ou Falso?"
+    "texto": "61. Se um script tem uma única classe, então o script e a classe obrigatoriamente devem ter o mesmo nome.\nVerdadeiro ou Falso?",
+    "resposta": 0
   },
   {
     "texto": "62. Qual o nome do arquivo que funciona como uma \"lista negra\" do git?"

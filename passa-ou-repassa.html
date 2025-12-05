@@ -92,13 +92,13 @@
         .main-container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 10px 20px;
+            padding: 10px 30px;
             position: relative;
             z-index: 10;
             flex: 1;
             display: flex;
             flex-direction: column;
-            overflow: hidden;
+            overflow: visible;
         }
 
         /* Placar dos times */
@@ -109,6 +109,7 @@
             margin-bottom: 10px;
             gap: 15px;
             flex-shrink: 0;
+            padding: 5px;
         }
 
         .team-score {
@@ -117,7 +118,6 @@
             border-radius: 12px;
             text-align: center;
             position: relative;
-            overflow: hidden;
             transition: all 0.3s ease;
         }
 
@@ -902,15 +902,15 @@
             </div>
         </div>
 
-        <!-- Validação de Resposta -->
+        <!-- Confirmação de Resposta -->
         <div class="validation-section" id="validationSection">
-            <div class="validation-title" id="validationTitle">A resposta está correta?</div>
+            <div class="validation-title" id="validationTitle">Você tem certeza disso?</div>
             <div class="validation-buttons">
-                <button class="btn btn-success" onclick="validateAnswer(true)">
-                    ✅ CORRETO (+100 pts)
+                <button class="btn btn-success" onclick="confirmAnswer()">
+                    ✅ SIM, TENHO CERTEZA
                 </button>
-                <button class="btn btn-danger" onclick="validateAnswer(false)">
-                    ❌ ERRADO (-50 pts)
+                <button class="btn btn-secondary" onclick="cancelAnswer()">
+                    ↩️ VOLTAR
                 </button>
             </div>
         </div>
@@ -1070,7 +1070,11 @@
                 
                 gameState.questions = data.map((item, index) => {
                     const parsed = parseQuestion(item.texto);
-                    return { id: index, ...parsed };
+                    return { 
+                        id: index, 
+                        ...parsed,
+                        correctAnswer: item.resposta !== undefined ? item.resposta : null
+                    };
                 });
                 
                 shuffleArray(gameState.questions);
@@ -1300,24 +1304,104 @@
             showValidation();
         }
 
-        // 6. Mostra seção de validação
+        // 6. Mostra seção de confirmação
         function showValidation() {
             // Para o timer se ainda estiver rodando
             stopTimer();
             
             gameState.phase = 'validating';
-            updatePhase('⏳ VALIDANDO');
-            elements.questionStatus.textContent = 'RESPOSTA CORRETA?';
+            updatePhase('❓ CONFIRMAR');
+            elements.questionStatus.textContent = 'TEM CERTEZA?';
             elements.validationSection.classList.add('active');
             elements.btnPass.disabled = true;
             elements.btnValidateOpen.style.display = 'none';
             
             const teamName = gameState.currentTeam === 'red' ? 'TIME VERMELHO' : 'TIME AZUL';
-            elements.validationTitle.textContent = `${teamName} - A resposta está correta?`;
+            elements.validationTitle.textContent = `${teamName} - Você tem certeza disso?`;
         }
 
-        // 7. Valida resposta
-        function validateAnswer(isCorrect) {
+        // 7. Confirma resposta e valida automaticamente
+        function confirmAnswer() {
+            const options = document.querySelectorAll('.option');
+            const correctAnswer = gameState.currentQuestion.correctAnswer;
+            
+            // Se tem resposta cadastrada, valida automaticamente
+            if (correctAnswer !== null && gameState.selectedOption !== null) {
+                const isCorrect = gameState.selectedOption === correctAnswer;
+                
+                // Marca a opção selecionada
+                if (isCorrect) {
+                    options[gameState.selectedOption].classList.add('correct');
+                } else {
+                    options[gameState.selectedOption].classList.add('wrong');
+                    // Mostra qual era a correta
+                    if (options[correctAnswer]) {
+                        options[correctAnswer].classList.add('correct');
+                    }
+                }
+                
+                // Aplica pontuação
+                if (isCorrect) {
+                    gameState.scores[gameState.currentTeam] += gameState.currentPointsCorrect;
+                    playSound('acerto');
+                    createConfetti();
+                    showResultMessage(gameState.currentTeam, `ACERTOU! +${gameState.currentPointsCorrect} pontos`, true);
+                } else {
+                    gameState.scores[gameState.currentTeam] += gameState.currentPointsWrong;
+                    playSound('erro');
+                    showResultMessage(gameState.currentTeam, `ERROU! ${gameState.currentPointsWrong} pontos`, false);
+                }
+            } else {
+                // Pergunta aberta ou sem resposta cadastrada - validação manual
+                showManualValidation();
+                return;
+            }
+            
+            gameState.answeredQuestions++;
+            updateScores();
+            updateStats();
+            finishQuestion();
+        }
+
+        // Cancela e volta para responder
+        function cancelAnswer() {
+            elements.validationSection.classList.remove('active');
+            gameState.phase = 'answering';
+            updatePhase(gameState.currentTeam === 'red' ? '🔴 TIME VERMELHO' : '🔵 TIME AZUL');
+            elements.questionStatus.textContent = gameState.currentTeam === 'red' ? 'VEZ DO VERMELHO' : 'VEZ DO AZUL';
+            
+            // Remove seleção visual
+            const options = document.querySelectorAll('.option');
+            options.forEach(opt => opt.classList.remove('selected'));
+            gameState.selectedOption = null;
+            
+            // Habilita passar novamente se ainda puder
+            if (gameState.passCount < 2) {
+                elements.btnPass.disabled = false;
+            }
+            
+            // Reinicia timer
+            startTimer();
+        }
+
+        // Validação manual para perguntas abertas
+        function showManualValidation() {
+            elements.validationTitle.textContent = 'A resposta está correta?';
+            elements.validationSection.innerHTML = `
+                <div class="validation-title">A resposta está correta?</div>
+                <div class="validation-buttons">
+                    <button class="btn btn-success" onclick="validateManual(true)">
+                        ✅ CORRETO
+                    </button>
+                    <button class="btn btn-danger" onclick="validateManual(false)">
+                        ❌ ERRADO
+                    </button>
+                </div>
+            `;
+        }
+
+        // Validação manual
+        function validateManual(isCorrect) {
             const options = document.querySelectorAll('.option');
             
             if (gameState.selectedOption !== null && options[gameState.selectedOption]) {
@@ -1328,7 +1412,6 @@
                 }
             }
             
-            // Usa pontos dinâmicos (ajustados pelos passes)
             if (isCorrect) {
                 gameState.scores[gameState.currentTeam] += gameState.currentPointsCorrect;
                 playSound('acerto');
@@ -1344,6 +1427,24 @@
             updateScores();
             updateStats();
             finishQuestion();
+            
+            // Restaura HTML original da validação
+            restoreValidationSection();
+        }
+
+        // Restaura seção de validação ao estado original
+        function restoreValidationSection() {
+            elements.validationSection.innerHTML = `
+                <div class="validation-title" id="validationTitle">Você tem certeza disso?</div>
+                <div class="validation-buttons">
+                    <button class="btn btn-success" onclick="confirmAnswer()">
+                        ✅ SIM, TENHO CERTEZA
+                    </button>
+                    <button class="btn btn-secondary" onclick="cancelAnswer()">
+                        ↩️ VOLTAR
+                    </button>
+                </div>
+            `;
         }
 
         // 8. Passar para outro time (PASSA ou REPASSA)

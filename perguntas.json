@@ -1,99 +1,122 @@
 [
   {
-    "texto": "1. Hierarquia visual refere-se à capacidade de:\nA) Organizar elementos por importância\nB) Medir fluxo de navegação\nC) Ajustar contraste\nD) Criar protótipos"
+    "texto": "1. Hierarquia visual refere-se à capacidade de:\nA) Organizar elementos por importância\nB) Medir fluxo de navegação\nC) Ajustar contraste\nD) Criar protótipos",
+    "resposta": 0
   },
   {
-    "texto": "2. A ALU pertence a qual componente?\nA) GPU\nB) CPU\nC) RAM\nD) SSD"
+    "texto": "2. A ALU pertence a qual componente?\nA) GPU\nB) CPU\nC) RAM\nD) SSD",
+    "resposta": 1
   },
   {
     "texto": "3. Um algoritmo deve apresentar finitude, clareza e ordem sem lógica. Verdadeiro ou Falso?"
   },
   {
-    "texto": "4. O Git é classificado como:\nA) VCS distribuído\nB) VCS centralizado\nC) Editor de código\nD) Protocolo de rede"
+    "texto": "4. O Git é classificado como:\nA) VCS distribuído\nB) VCS centralizado\nC) Editor de código\nD) Protocolo de rede",
+    "resposta": 0
   },
   {
-    "texto": "5. O Scrum é considerado:\nA) Framework ágil incremental\nB) Método cascata\nC) Modelo sequencial\nD) Processo orientado a documentos"
+    "texto": "5. O Scrum é considerado:\nA) Framework ágil incremental\nB) Método cascata\nC) Modelo sequencial\nD) Processo orientado a documentos",
+    "resposta": 0
   },
   {
     "texto": "6. Personas ajudam a prever necessidades reais de usuários. Verdadeiro ou Falso?"
   },
   {
-    "texto": "7. A RAM é classificada como:\nA) Memória volátil\nB) Memória persistente\nC) Memória gráfica\nD) Armazenamento externo"
+    "texto": "7. A RAM é classificada como:\nA) Memória volátil\nB) Memória persistente\nC) Memória gráfica\nD) Armazenamento externo",
+    "resposta": 0
   },
   {
-    "texto": "8. O operador lógico AND é:\nA) ||\nB) &&\nC) !\nD) =="
+    "texto": "8. O operador lógico AND é:\nA) ||\nB) &&\nC) !\nD) ==",
+    "resposta": 1
   },
   {
-    "texto": "9. \"git clone\" realiza:\nA) Criação de repositório\nB) Cópia completa de repo remoto\nC) Reset do histórico\nD) Exclusão de branches"
+    "texto": "9. \"git clone\" realiza:\nA) Criação de repositório\nB) Cópia completa de repo remoto\nC) Reset do histórico\nD) Exclusão de branches",
+    "resposta": 1
   },
   {
     "texto": "10. Limitar WIP reduz sobrecarga e multitarefa improdutiva. Verdadeiro ou Falso?"
   },
   {
-    "texto": "11. Wireframe é:\nA) Estrutura inicial da interface\nB) Layout final\nC) Documento de requisitos\nD) Protótipo navegável"
+    "texto": "11. Wireframe é:\nA) Estrutura inicial da interface\nB) Layout final\nC) Documento de requisitos\nD) Protótipo navegável",
+    "resposta": 0
   },
   {
-    "texto": "12. Um exemplo de dispositivo de entrada é:\nA) Monitor\nB) Câmara\nC) Caixa de som\nD) Fonte"
+    "texto": "12. Um exemplo de dispositivo de entrada é:\nA) Monitor\nB) Câmara\nC) Caixa de som\nD) Fonte",
+    "resposta": 1
   },
   {
     "texto": "13. Condicionais permitem alterar o fluxo do código. Verdadeiro ou Falso?"
   },
   {
-    "texto": "14. Branch serve para:\nA) Esconder código\nB) Desenvolver fluxos paralelos\nC) Comprimir arquivos\nD) Criar versões finais"
+    "texto": "14. Branch serve para:\nA) Esconder código\nB) Desenvolver fluxos paralelos\nC) Comprimir arquivos\nD) Criar versões finais",
+    "resposta": 1
   },
   {
-    "texto": "15. Tempo recomendado da Daily Scrum:\nA) 15 minutos\nB) 1 hora\nC) 5 minutos\nD) Indefinido"
+    "texto": "15. Tempo recomendado da Daily Scrum:\nA) 15 minutos\nB) 1 hora\nC) 5 minutos\nD) Indefinido",
+    "resposta": 0
   },
   {
-    "texto": "16. O SSD substitui principalmente:\nA) HDD\nB) Processador\nC) Cache\nD) GPU"
+    "texto": "16. O SSD substitui principalmente:\nA) HDD\nB) Processador\nC) Cache\nD) GPU",
+    "resposta": 0
   },
   {
     "texto": "17. Contraste é essencial para legibilidade. Verdadeiro ou Falso?"
   },
   {
-    "texto": "18. O operador != significa:\nA) Igual\nB) Diferente\nC) Maior que\nD) Menor que"
+    "texto": "18. O operador != significa:\nA) Igual\nB) Diferente\nC) Maior que\nD) Menor que",
+    "resposta": 1
   },
   {
-    "texto": "19. O Product Backlog contém:\nA) Itens priorizados do produto\nB) Apenas bugs\nC) Apenas tarefas técnicas\nD) Apenas requisitos aprovados"
+    "texto": "19. O Product Backlog contém:\nA) Itens priorizados do produto\nB) Apenas bugs\nC) Apenas tarefas técnicas\nD) Apenas requisitos aprovados",
+    "resposta": 0
   },
   {
     "texto": "20. git commit registra mudanças. Verdadeiro ou Falso?"
   },
   {
-    "texto": "21. Prototipação de alta fidelidade simula:\nA) Aparência e interação reais\nB) Código final\nC) Banco de dados\nD) Build jogável"
+    "texto": "21. Prototipação de alta fidelidade simula:\nA) Aparência e interação reais\nB) Código final\nC) Banco de dados\nD) Build jogável",
+    "resposta": 0
   },
   {
     "texto": "22. GPUs realizam processamento paralelo. Verdadeiro ou Falso?"
   },
   {
-    "texto": "23. Loop que repete enquanto condição for verdadeira:\nA) for\nB) while\nC) switch\nD) return"
+    "texto": "23. Loop que repete enquanto condição for verdadeira:\nA) for\nB) while\nC) switch\nD) return",
+    "resposta": 1
   },
   {
-    "texto": "24. git push envia commits para:\nA) Repositório remoto\nB) Armazenamento do computador\nC) Repositório local\nD) BIOS do Computador"
+    "texto": "24. git push envia commits para:\nA) Repositório remoto\nB) Armazenamento do computador\nC) Repositório local\nD) BIOS do Computador",
+    "resposta": 0
   },
   {
-    "texto": "25. Duração comum da Sprint:\nA) 1 a 4 semanas\nB) 6 meses\nC) 1 dia\nD) 12 horas"
+    "texto": "25. Duração comum da Sprint:\nA) 1 a 4 semanas\nB) 6 meses\nC) 1 dia\nD) 12 horas",
+    "resposta": 0
   },
   {
     "texto": "26. Acessibilidade melhora experiência para todos. Verdadeiro ou Falso?"
   },
   {
-    "texto": "27. Barramento principal entre CPU e memória:\nA) BUS\nB) PCIe\nC) SATA\nD) HDMI"
+    "texto": "27. Barramento principal entre CPU e memória:\nA) BUS\nB) PCIe\nC) SATA\nD) HDMI",
+    "resposta": 0
   },
   {
-    "texto": "28. Variável :\nA) Armazena valores mutáveis\nB) É uma Função\nC) É uma Estrutura fixa\nD) É um Tipo de laço"
+    "texto": "28. Variável :\nA) Armazena valores mutáveis\nB) É uma Função\nC) É uma Estrutura fixa\nD) É um Tipo de laço",
+    "resposta": 0
   },
   {
-    "texto": "29. Merge é usado para:\nA) Unir branches\nB) Alternar entre branches\nC) Revisar código\nD) Deletar branches"
+    "texto": "29. Merge é usado para:\nA) Unir branches\nB) Alternar entre branches\nC) Revisar código\nD) Deletar branches",
+    "resposta": 0
   },
   {
     "texto": "30. No Kanban, o fluxo é visual. Verdadeiro ou Falso?"
   },
   {
-    "texto": "31. Flowchart representa:\nA) Navegação ou fluxo lógico\nB) Layout final\nC) Arquitetura de arquivos\nD) Prototipagem gráfica"
+    "texto": "31. Flowchart representa:\nA) Navegação ou fluxo lógico\nB) Layout final\nC) Arquitetura de arquivos\nD) Prototipagem gráfica",
+    "resposta": 0
   },
   {
-    "texto": "32. GHz indica:\nA) Frequência de clock\nB) Capacidade da RAM\nC) Temperatura\nD) Velocidade da GPU"
+    "texto": "32. GHz indica:\nA) Frequência de clock\nB) Capacidade da RAM\nC) Temperatura\nD) Velocidade da GPU",
+    "resposta": 0
   },
   {
     "texto": "33. Um else pode existir sem precisar de um if. Verdadeiro ou Falso?"
@@ -102,61 +125,75 @@
     "texto": "34. Para mandar o repositório local para o remoto, utilizamos git pull. Verdadeiro ou Falso?"
   },
   {
-    "texto": "35. O Product Owner deve:\nA) Priorizar backlog\nB) Codificar\nC) Criar testes\nD) Definir arquitetura"
+    "texto": "35. O Product Owner deve:\nA) Priorizar backlog\nB) Codificar\nC) Criar testes\nD) Definir arquitetura",
+    "resposta": 0
   },
   {
     "texto": "36. Feedback visual reforça ações. Verdadeiro ou Falso?"
   },
   {
-    "texto": "37. Dissipadores servem para:\nA) Resfriamento\nB) Execução lógica\nC) Armazenamento\nD) Renderização"
+    "texto": "37. Dissipadores servem para:\nA) Resfriamento\nB) Execução lógica\nC) Armazenamento\nD) Renderização",
+    "resposta": 0
   },
   {
-    "texto": "38. Operador OU no C# é:\nA) &&\nB) ||\nC) !\nD) !="
+    "texto": "38. Operador OU no C# é:\nA) &&\nB) ||\nC) !\nD) !=",
+    "resposta": 1
   },
   {
-    "texto": "39. Repositório local é guardado:\nA) No computador do dev\nB) Na nuvem\nC) Apenas no servidor\nD) Em casa"
+    "texto": "39. Repositório local é guardado:\nA) No computador do dev\nB) Na nuvem\nC) Apenas no servidor\nD) Em casa",
+    "resposta": 0
   },
   {
-    "texto": "40. A Sprint Review apresenta:\nA) Incremento produzido\nB) Retrospectiva\nC) Planejamento\nD) Diagramas"
+    "texto": "40. A Sprint Review apresenta:\nA) Incremento produzido\nB) Retrospectiva\nC) Planejamento\nD) Diagramas",
+    "resposta": 0
   },
   {
-    "texto": "41. Design responsivo adapta-se a:\nA) Tamanhos e resoluções\nB) Plataformas 3D\nC) Banco de dados\nD) Só mobile"
+    "texto": "41. Design responsivo adapta-se a:\nA) Tamanhos e resoluções\nB) Plataformas 3D\nC) Banco de dados\nD) Só mobile",
+    "resposta": 0
   },
   {
     "texto": "42. A placa-mãe integra comunicação. Verdadeiro ou Falso?"
   },
   {
-    "texto": "43. O laço de repetição FOR é dividido em quantas partes?\nA) 1 \nB) 2\nC) 3\nD) 4"
+    "texto": "43. O laço de repetição FOR é dividido em quantas partes?\nA) 1 \nB) 2\nC) 3\nD) 4",
+    "resposta": 2
   },
   {
-    "texto": "44. git status mostra:\nA) Arquivos alterados\nB) Histórico\nC) Tempo total\nD) Branch remota"
+    "texto": "44. git status mostra:\nA) Arquivos alterados\nB) Histórico\nC) Tempo total\nD) Branch remota",
+    "resposta": 0
   },
   {
-    "texto": "45. Kanban utiliza:\nA) Quadro visual\nB) Sprints\nC) UML\nD) Wireframes"
+    "texto": "45. Kanban utiliza:\nA) Quadro visual\nB) Sprints\nC) UML\nD) Wireframes",
+    "resposta": 0
   },
   {
     "texto": "46. Pain points são dificuldades. Verdadeiro ou Falso?"
   },
   {
-    "texto": "47. Memória volátil:\nA) RAM\nB) SSD\nC) HDD\nD) ROM"
+    "texto": "47. Memória volátil:\nA) RAM\nB) SSD\nC) HDD\nD) ROM",
+    "resposta": 0
   },
   {
-    "texto": "48. Funções servem para:\nA) Reutilizar código\nB) Organizar hardware\nC) Criar loops\nD) Clicar"
+    "texto": "48. Funções servem para:\nA) Reutilizar código\nB) Organizar hardware\nC) Criar loops\nD) Clicar",
+    "resposta": 0
   },
   {
-    "texto": "49. git log exibe:\nA) Histórico\nB) Bugs\nC) Arquitetura\nD) RAM"
+    "texto": "49. git log exibe:\nA) Histórico\nB) Bugs\nC) Arquitetura\nD) RAM",
+    "resposta": 0
   },
   {
     "texto": "50. O Scrum Master remove impedimentos. Verdadeiro ou Falso?"
   },
   {
-    "texto": "51. Ao configurar elementos de Interface de Usuário (UI) no Unity, todos os elementos visuais (como botões, textos e imagens) devem ser filhos de qual componente obrigatório? A) Canvas B) UI Renderer C) ScreenSpace D) Scene Manager"
+    "texto": "51. Ao configurar elementos de Interface de Usuário (UI) no Unity, todos os elementos visuais (como botões, textos e imagens) devem ser filhos de qual componente obrigatório? A) Canvas B) UI Renderer C) ScreenSpace D) Scene Manager",
+    "resposta": 0
   },
   {
     "texto": "52. Qual componente busca instruções na memória?"
   },
   {
-    "texto": "53. Qual janela no Unity mostra as características (como posição, rotação e escala) de um objeto selecionado? \nA) Scene \nB) Hierarchy \nC) Project \nD) Inspector"
+    "texto": "53. Qual janela no Unity mostra as características (como posição, rotação e escala) de um objeto selecionado? \nA) Scene \nB) Hierarchy \nC) Project \nD) Inspector",
+    "resposta": 3
   },
   {
     "texto": "54. Heurística \"consistência e padrões\" significa:"
@@ -168,7 +205,8 @@
     "texto": "56. Qual é a saída?\n\ninteiro n = 10\n enquanto (n > 6) {\n\t n = n - 2\n }\n escreva(n)"
   },
   {
-    "texto": "57. Em qual etapa do git fica um arquivo que acabou de ser modificado? A) commited B) staged C) untracked D) added"
+    "texto": "57. Em qual etapa do git fica um arquivo que acabou de ser modificado? A) commited B) staged C) untracked D) added",
+    "resposta": 2
   },
   {
     "texto": "58. A velocidade do clock da CPU está relacionada a:"
@@ -195,7 +233,8 @@
     "texto": "65. Entrega funcional a cada ciclo define:"
   },
   {
-    "texto": "66. Para que é usado [SerializeField] em uma variável de um script C# no Unity? A) Impedir que a variável seja modificada por outras classes. B) Tornar a variável acessível publicamente no código. C) Expor a variável no painel Inspector do Unity, permitindo a edição no Editor. D) Forçar o Unity a inicializar a variável com o valor padrão zero."
+    "texto": "66. Para que é usado [SerializeField] em uma variável de um script C# no Unity? A) Impedir que a variável seja modificada por outras classes. B) Tornar a variável acessível publicamente no código. C) Expor a variável no painel Inspector do Unity, permitindo a edição no Editor. D) Forçar o Unity a inicializar a variável com o valor padrão zero.",
+    "resposta": 2
   },
   {
     "texto": "67. O que \"git clone\" faz?"
@@ -246,7 +285,8 @@
     "texto": "82. Para que serve memória ROM?"
   },
   {
-    "texto": "83. Qual componente é essencial para adicionar física a um objeto no Unity? \nA) Transform \nB) Mesh Renderer \nC) Collider \nD) Rigidbody"
+    "texto": "83. Qual componente é essencial para adicionar física a um objeto no Unity? \nA) Transform \nB) Mesh Renderer \nC) Collider \nD) Rigidbody",
+    "resposta": 3
   },
   {
     "texto": "84. Quais são os dois tipos de repositórios Git?"
@@ -264,7 +304,8 @@
     "texto": "88. Qual é o tipo dessa função?\n\nfuncao _______ podeEntrar (cadeia nome) { \n\t se (nome == \"Aline\" ou nome == \"Bruno\") { \n\t \t escreva(\"Sim!\") \n\t } senao { \n\t \t escreva(\"Não!\") \n\t } \n}"
   },
   {
-    "texto": "89. Em um script C# no Unity, a função que é chamada automaticamente a cada novo quadro (frame) do jogo é:\nA) Start()\nB) Awake()\nC) Update()\nD) OnEnable()"
+    "texto": "89. Em um script C# no Unity, a função que é chamada automaticamente a cada novo quadro (frame) do jogo é:\nA) Start()\nB) Awake()\nC) Update()\nD) OnEnable()",
+    "resposta": 2
   },
   {
     "texto": "90. Product Backlog ser \"vivo\" significa:"
@@ -273,13 +314,15 @@
     "texto": "91. Impacto da tipografia:"
   },
   {
-    "texto": "92. O Prefab da Unity é melhor descrito como: A) Um script que contém a lógica principal do jogo. B) Um GameObject que pode ser reutilizado em múltiplas cenas. C) Uma pasta contendo texturas e materiais. D) A malha (Mesh) de um modelo 3D importado."
+    "texto": "92. O Prefab da Unity é melhor descrito como: A) Um script que contém a lógica principal do jogo. B) Um GameObject que pode ser reutilizado em múltiplas cenas. C) Uma pasta contendo texturas e materiais. D) A malha (Mesh) de um modelo 3D importado.",
+    "resposta": 1
   },
   {
     "texto": "93. O que caracteriza cache L1?"
   },
   {
-    "texto": "94. Qual a forma correta de pausar o jogo via script? A) Time.deltaTime = 0; B) Time.timeScale = 0f; C) Application.Quit(); D) SceneManager.LoadScene(0);"
+    "texto": "94. Qual a forma correta de pausar o jogo via script? A) Time.deltaTime = 0; B) Time.timeScale = 0f; C) Application.Quit(); D) SceneManager.LoadScene(0);",
+    "resposta": 1
   },
   {
     "texto": "95. Qual é o tipo dessa função?\n\nfuncao _______ multiplos (inteiro a, inteiro b) { \n\t retorne (a % b == 0) \n}"

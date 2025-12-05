@@ -9,7 +9,7 @@
     "texto": "8. O operador lógico AND é:\nA) ||\nB) &&\nC) !\nD) =="
   },
   {
-    "texto": "9. git clone realiza:\nA) Criação de repositório\nB) Cópia completa de repo remoto\nC) Reset do histórico\nD) Exclusão de branches"
+    "texto": "9. \"git clone\" realiza:\nA) Criação de repositório\nB) Cópia completa de repo remoto\nC) Reset do histórico\nD) Exclusão de branches"
   },
   {
     "texto": "13. Condicionais permitem alterar o fluxo do código. Verdadeiro ou Falso?"
@@ -60,34 +60,34 @@
     "texto": "49. git log exibe:\nA) Histórico\nB) Bugs\nC) Arquitetura\nD) RAM"
   },
   {
-    "texto": "y51. Considere o código:\n\ninteiro x = 3\ninteiro y = 5\n\nse (x * 2 > y) entao\n\t escreva(\"A\")\n senao\n\t escreva(\"B\")\n fimse\n\nO que será impresso?"
+    "texto": "51. Ao configurar elementos de Interface de Usuário (UI) no Unity, todos os elementos visuais (como botões, textos e imagens) devem ser filhos de qual componente obrigatório? A) Canvas B) UI Renderer C) ScreenSpace D) Scene Manager"
   },
   {
     "texto": "53. Qual janela no Unity mostra as características (como posição, rotação e escala) de um objeto selecionado? \nA) Scene \nB) Hierarchy \nC) Project \nD) Inspector"
   },
   {
-    "texto": "y56. Qual é a saída?\n\ninteiro n = 10\n enquanto (n > 6) faca\n\t n = n - 2\n fimenquanto\n escreva(n)"
+    "texto": "56. Qual é a saída?\n\ninteiro n = 10\n enquanto (n > 6) {\n\t n = n - 2\n }\n escreva(n)"
   },
   {
-    "texto": "y57. O que é um merge conflict?"
+    "texto": "57. Em qual etapa do git fica um arquivo que acabou de ser modificado? A) commited B) staged C) untracked D) added"
   },
   {
-    "texto": "y61. Qual é a saída?\n\ninteiro a = 2\ninteiro b = 4\ninteiro c = a + b * 3\nescreva(c)"
+    "texto": "61. Se um script tem uma única classe, então o script e a classe obrigatoriamente devem ter o mesmo nome.\nVerdadeiro ou Falso?"
   },
   {
-    "texto": "62. Qual o nome do arquivo que funciona como uma 'lista negra' do git?"
+    "texto": "62. Qual o nome do arquivo que funciona como uma \"lista negra\" do git?"
   },
   {
-    "texto": "y66. Qual é a saída?\n\ninteiro x = 0\npara i de 1 ate 4 faca\n\t x = x + i\nfimpara\nescreva(x)"
+    "texto": "66. Para que é usado [SerializeField] em uma variável de um script C# no Unity? A) Impedir que a variável seja modificada por outras classes. B) Tornar a variável acessível publicamente no código. C) Expor a variável no painel Inspector do Unity, permitindo a edição no Editor. D) Forçar o Unity a inicializar a variável com o valor padrão zero."
   },
   {
-    "texto": "67. O que git clone faz?"
+    "texto": "67. O que \"git clone\" faz?"
   },
   {
     "texto": "71. Qual é a saída?\n\ninteiro s = 10\npara (inteiro c = 1; c > s; c++){\n\t escreva(c)\n}\n"
   },
   {
-    "texto": "72. 'git branch nome_branch' faz o quê?"
+    "texto": "72. \"git branch nome_branch\" faz o quê?"
   },
   {
     "texto": "76. Qual é a saída?\n\ninteiro n = 23\nse (n % 3 == 0) {\n\t escreva(\"Goku\")\n}\nsenao{\n\t escreva(\"Vegeta\")\n}"
@@ -102,16 +102,16 @@
     "texto": "84. Quais são os dois tipos de repositórios Git?"
   },
   {
-    "texto": "y88. O que o código abaixo imprime se o usuário digitar 0?\n\ninteiro entrada\nleia(entrada)\nse (entrada > 0) entao\n\t escreva(\"positivo\")\nsenao\n\t escreva(\"nao positivo\")\nfimse"
+    "texto": "88. Qual é o tipo dessa função?\n\nfuncao _______ podeEntrar (cadeia nome) { \n\t se (nome == \"Aline\" ou nome == \"Bruno\") { \n\t \t escreva("Sim!") \n\t } senao { \n\t \t escreva("Não!") \n\t } \n}"
   },
   {
     "texto": "89. Em um script C# no Unity, a função que é chamada automaticamente a cada novo quadro (frame) do jogo é:\nA) Start()\nB) Awake()\nC) Update()\nD) OnEnable()"
   },
   {
-    "texto": "y92. Qual é a saída?\n\ninteiro i = 1\ninteiro cont = 0\nenquanto (i <= 8) faca\n\t se (i % 3 == 0) {\n\t \t cont = cont + 1\n\t }\n\t i = i + 1\nescreva(cont)"
+    "texto": "92. O Prefab da Unity é melhor descrito como: A) Um script que contém a lógica principal do jogo. B) Um GameObject que pode ser reutilizado em múltiplas cenas. C) Uma pasta contendo texturas e materiais. D) A malha (Mesh) de um modelo 3D importado."
   },
   {
-    "texto": "y94. Qual é a saída?\n\ninteiro x = 5\npara i de 1 ate 3 faca\n\t x = x + i\n\t se (x > 8) entao\n\t \t escreva(x)\n\t fimse\nfimpara"
+    "texto": "94. Qual a forma correta de pausar o jogo via script? A) Time.deltaTime = 0; B) Time.timeScale = 0f; C) Application.Quit(); D) SceneManager.LoadScene(0);"
   },
   {
     "texto": "95. Qual é o tipo dessa função?\n\nfuncao _______ multiplos (inteiro a, inteiro b) { \n\t retorne (a % b == 0) \n}"
@@ -120,6 +120,6 @@
     "texto": "97. Qual é a saída?\n\ninteiro soma = 0\n(inteiro c = 1; c <= 5; c++) {\n\t se (i % 2 == 0) {\n\t \t soma = soma + i\n\t }\n}\nescreva(soma)"
   },
   {
-    "texto": "y100. Qual é a saída?\n\ninteiro a = 2\ninteiro b = 3\ninteiro c = 0\nse (a > b) entao\n\t c = a + b\nsenao\n\t c = b - a\nfimse\nescreva(c)"
+    "texto": "100. Para criar um arquivo .gitignore, complete o que falta: ___________ .gitignore"
   }
 ]

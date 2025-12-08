@@ -108,12 +108,12 @@
     "resposta": 0
   },
   {
-    "texto": "28. Variável :\nA) Armazena valores mutáveis\nB) É uma Função\nC) É uma Estrutura fixa\nD) É um Tipo de laço",
-    "resposta": 0
+    "texto": "28. Variável :\nA) É uma Função\nB) Armazena valores mutáveis\nC) É uma Estrutura fixa\nD) É um Tipo de laço",
+    "resposta": 1
   },
   {
-    "texto": "29. Merge é usado para:\nA) Unir branches\nB) Alternar entre branches\nC) Revisar código\nD) Deletar branches",
-    "resposta": 0
+    "texto": "29. Merge é usado para:\nA) Revisar código\nB) Alternar entre branches\nC) Unir branches\nD) Deletar branches",
+    "resposta": 2
   },
   {
     "texto": "30. No Kanban, o fluxo é visual. Verdadeiro ou Falso?",
